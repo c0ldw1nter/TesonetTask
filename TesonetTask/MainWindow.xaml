@@ -1,0 +1,24 @@
+﻿<Window x:Class="TesonetTask.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TesonetTask"
+        mc:Ignorable="d"
+        Title="Tesonet" Height="{Binding WindowHeight}" Width="268">
+    <Grid>
+        <StackPanel Orientation="Vertical" Name="LoginPanel">
+            <Label Content="Username:"/>
+            <TextBox Text="tesonet" Name="UsernameBox"/>
+            <Label Content="Password:" />
+            <PasswordBox Password="partyanimal" Name="PWBox"/>
+            <Button Click="Login" Content="Login" />
+        </StackPanel>
+        <DockPanel Visibility="Collapsed" Name="ServerListPanel">
+            <Label Name="ServersLabel" DockPanel.Dock="Top"/>
+            <ScrollViewer DockPanel.Dock="Bottom">
+                <ListView Name="ServerListView"/>
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</Window>
